@@ -1,6 +1,6 @@
 import React from "react"; // Import React
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS for styles
-import './App.css'; // Import custom CSS for additional styles
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS for styling
+import './App.css'; // Custom CSS for additional styles
 
 const App = () => {
   return (
@@ -13,47 +13,75 @@ const App = () => {
           src="https://sportsboulevard.sa/images/Logo.svg"
           alt="Logo"
         />
-
-        {/* Navbar Links */}
+        
+        {/* Navbar links and dropdowns */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             {/* Dropdown for "WHO WE ARE" */}
             <li className="nav-item active dropdown">
               <a
-                href="https://www.google.com" // Placeholder link for now
+                href="#"
                 className="nav-link dropdown-toggle"
                 id="navbarDropdown"
-                data-bs-toggle="dropdown" // Bootstrap dropdown functionality
+                role="button"
+                data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 WHO WE ARE
               </a>
-              {/* Dropdown Menu Items */}
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {/* Dropdown items for "WHO WE ARE" */}
                 <li>
-                  <a href="https://www.google.com" className="dropdown-item">
-                    About Us
-                  </a>
+                  <a href="#" className="dropdown-item">About Us</a>
                 </li>
                 <hr />
                 <li>
-                  <a href="https://www.google.com" className="dropdown-item">
-                    Project Timeline
-                  </a>
+                  <a href="#" className="dropdown-item">Project Timeline</a>
                 </li>
               </ul>
             </li>
 
-            {/* Other Navbar Items */}
+            {/* Simple nav item for "DESIGN CODE" */}
             <li className="nav-item active">
-              <a href="https://www.google.com" className="nav-link">
-                DESIGN CODE
+              <a href="#" className="nav-link">DESIGN CODE</a>
+            </li>
+
+            {/* Simple nav item for "OUR DISTRICTS" */}
+            <li className="nav-item active">
+              <a href="#" className="nav-link">OUR DISTRICTS</a>
+            </li>
+
+            {/* Dropdown for "MEDIA CENTER" */}
+            <li className="nav-item active dropdown">
+              <a
+                href="#"
+                className="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                MEDIA CENTER
               </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {/* Dropdown items for "MEDIA CENTER" */}
+                <li><a href="#" className="dropdown-item">News</a></li>
+                <hr />
+                <li><a href="#" className="dropdown-item">Media Gallery</a></li>
+                <li><a href="#" className="dropdown-item">Contact Media Center</a></li>
+                <li><a href="#" className="dropdown-item">Community Information Center</a></li>
+              </ul>
+            </li>
+
+            {/* Simple nav items */}
+            <li className="nav-item active">
+              <a href="#" className="nav-link">VENDOR RELATIONS</a>
             </li>
             <li className="nav-item active">
-              <a href="https://www.google.com" className="nav-link">
-                OUR DISTRICTS
-              </a>
+              <a href="#" className="nav-link">CAREERS</a>
+            </li>
+            <li className="nav-item active">
+              <a href="#" className="nav-link">CONTACT US</a>
             </li>
           </ul>
         </div>
@@ -66,18 +94,22 @@ const App = () => {
           <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
           <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
           <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
         </div>
         
-        {/* Carousel Items */}
+        {/* Carousel Inner */}
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img
-              src="img/img1.png" // Image source
-              alt="img1"
-              className="d-block" // Bootstrap class for image display
-              width="305" // Set width
-              height="236" // Set height
-            />
+            <img src="img/img1.png" alt="img1" className="d-block" width="305" height="236" />
+          </div>
+          <div className="carousel-item">
+            <img src="img/img2.png" alt="img2" className="d-block" width="305" height="236" />
+          </div>
+          <div className="carousel-item">
+            <img src="img/img3.png" alt="img3" className="d-block" width="305" height="236" />
+          </div>
+          <div className="carousel-item">
+            <img src="img/img4.png" alt="img4" className="d-block" width="304" height="236" />
           </div>
         </div>
 
@@ -89,8 +121,38 @@ const App = () => {
           <span className="carousel-control-next-icon"></span>
         </button>
       </div>
+
+      {/* Video Section */}
+      <div id="ve">
+        <video autoPlay muted>
+          {/* Video sources */}
+          <source src="ve/SBF.mp4" type="video/mp4" />
+          <source src="movie.ogg" type="video/ogg" />
+          {/* Fallback message for unsupported browsers */}
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Project Section */}
+      <div className="box">
+        <h1>Projects</h1>
+        <h2>IN NUMBERS</h2>
+        {/* Paragraph about projects */}
+        <p>
+          A widespread destination that attracts pedestrians, professional and amateur cyclists, and horse riders,
+          alongside art and culture enthusiasts and eco-friends, altogether, on paths and spaces that create a healthy lifestyle.
+        </p>
+      </div>
+
+      {/* Image Section */}
+      <div className="box">
+        {/* Example image */}
+        <img src="img/p1.png" className="rounded" alt="Cinque Terre" width="500" height="400" />
+      </div>
+
+      <div id="worktest"></div>
     </div>
   );
 };
 
-export default App; // Exporting the component
+export default App;
