@@ -1,74 +1,56 @@
-/* General Body Styles */
+/* Basic Styling for the Body */
 body {
-  font-family: Arial, sans-serif; /* Set a default font */
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: red; /* Set background color to red */
+  height: 200px; /* Set the height of the body */
 }
 
 /* Navbar Styling */
 .navbar {
-  margin-bottom: 30px; /* Add some space below the navbar */
+  height: 60px; /* Set the navbar height */
 }
 
-/* Navbar Image */
-.navbar img {
-  height: 50px; /* Set a fixed height for the logo */
+/* Navbar Link Styling */
+.nav-link {
+  margin-left: 30px; /* Add margin to the left of the navbar links */
 }
 
-/* Navbar Dropdown Styles */
-.nav-item .dropdown-menu {
-  background-color: #f8f9fa; /* Lighter background for the dropdown */
-  border-radius: 5px; /* Round corners for dropdown */
-}
-
-.nav-item .dropdown-item {
-  color: #343a40; /* Set text color to dark */
-}
-
-.nav-item .dropdown-item:hover {
-  background-color: #007bff; /* Highlight on hover */
-  color: white; /* Change text color to white on hover */
-}
-
-/* Carousel Styles */
+/* Carousel Inner Styling */
 .carousel-inner {
-  max-height: 400px; /* Limit the height of the carousel images */
+  padding-right: 500px; /* Add padding to the right side of the carousel */
 }
 
-.carousel-item img {
-  width: 100%; /* Make images stretch to fill the carousel width */
-  height: auto;
+/* Carousel Indicators Styling */
+.carousel-indicators {
+  width: 70px; /* Set the width of the carousel indicators */
+  background: gray; /* Set the background color of indicators to gray */
+  margin-left: 100px; /* Add margin to the left of the indicators */
 }
 
-/* Box Styling */
+/* Video Styling */
+video {
+  height: 300px; /* Set the height of the video element */
+}
+
+/* Box Styling (3 equal width columns) */
 .box {
-  padding: 20px; /* Add padding to the box */
-  margin: 20px 0; /* Add margin to create space between boxes */
-  background-color: white; /* White background for the box */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center; /* Center align text */
+  float: left; /* Float the boxes to the left */
+  width: 33.33%; /* Set width of the box to 33.33% (3 equal-width columns) */
+  padding: 50px; /* Add padding inside the box */
 }
 
-.box h1 {
-  font-size: 2rem; /* Large heading */
-  color: #333; /* Dark text color */
-}
-
-.box h2 {
-  font-size: 1.5rem; /* Slightly smaller heading */
-  color: #007bff; /* Blue color for the subheading */
-}
-
-.box p {
-  font-size: 1.1rem; /* Slightly larger paragraph text */
-  line-height: 1.6; /* Increase line height for readability */
-  color: #555; /* Light gray text */
-  margin-top: 15px; /* Add margin to the top */
-}
-
-/* Image Styling */
+/* Styling for images with rounded corners */
 img.rounded {
-  border-radius: 10px; /* Round the corners of images */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0
+  border-radius: 10px; /* Round the corners of the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow around images */
+}
+
+/* Video section styling */
+#ve {
+  padding: 20px; /* Add padding around the video */
+}
+
+/* Styling for the carousel images */
+.carousel-inner .carousel-item img {
+  max-width: 100%; /* Make sure images fit within the carousel container */
+  height: auto; /* Keep the aspect ratio of the images */
+}
