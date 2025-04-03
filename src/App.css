@@ -1,41 +1,95 @@
-/* Body styles */
+/* Global Styles */
 body {
-  background-color: red; /* Set the background color to red */
-  height: 200px; /* Set the height of the body */
-  margin: 0; /* Remove default margin */
+  background-color: red; /* Set a red background for the page */
+  height: 100%; /* Make sure the body fills the entire viewport */
+  margin: 0; /* Remove any default margin */
+  font-family: Arial, sans-serif; /* Set a basic font for the page */
 }
 
-/* Navbar styles */
+/* Navbar Styling - Customize Bootstrap Navbar */
 .navbar {
-  height: 60px; /* Set the height of the navbar */
+  height: 60px; /* Adjust the navbar height */
+  padding: 0 10px; /* Add padding inside the navbar */
 }
 
-/* Nav link spacing */
+/* Navbar Links Styling */
+.navbar-nav {
+  flex-direction: row; /* Make navbar items align horizontally */
+}
+
+/* Nav links customization */
 .nav-link {
-  margin-left: 30px; /* Add margin to the left of navbar links */
+  margin-left: 30px; /* Add space between each link */
+  color: black; /* Set the default link color */
 }
 
-/* Carousel Inner styles */
+/* Active Navbar Link Styling */
+.nav-item.active .nav-link {
+  color: #007bff; /* Change color to blue for active links */
+}
+
+/* Navbar Toggler (Hamburger Menu) */
+.navbar-toggler {
+  border: none; /* Remove the border from the hamburger menu */
+}
+
+/* Dropdown Menu Styling */
+.nav-item.active .dropdown-menu {
+  background-color: #f8f9fa; /* Light background color for dropdown */
+}
+
+/* Carousel Styling */
 .carousel-inner {
-  padding-right: 500px; /* Add padding to the right side of carousel */
+  padding-right: 50px; /* Adjust right padding of the carousel */
 }
 
-/* Carousel indicators - adjusted to look good */
 .carousel-indicators {
-  width: 70px; /* Set the width of the carousel indicators */
-  background: gray; /* Set the background color of the indicators */
-  margin-left: 100px; /* Add margin to the left of carousel indicators */
+  width: 70px; /* Set a specific width for carousel indicators */
+  background: gray; /* Set a background color for the indicators */
+  margin-left: 100px; /* Move the indicators slightly to the right */
 }
 
-/* Video styling */
+/* Video Styling */
 video {
-  height: 300px; /* Set the height of the video */
+  width: 100%; /* Make videos take up 100% of the width */
+  max-height: 300px; /* Limit the height of videos */
+  object-fit: cover; /* Ensure the video maintains its aspect ratio */
 }
 
-/* Box layout - float and padding */
+/* Box Layout - Divide into 3 equal sections */
 .box {
-  float: left; /* Float the elements to the left */
-  width: 33.33%; /* Set each box to take up 33.33% of the container */
-  padding: 50px; /* Add padding around the content */
-  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  float: left;
+  width: 33.33%; /* Each box takes up one-third of the width */
+  padding: 50px; /* Add padding inside each box */
+  box-sizing: border-box; /* Include padding in box width calculation */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .box {
+    width: 100%; /* On smaller screens, make the boxes full width */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .nav-link {
+    margin-left: 10px; /* Reduce margin between links on small screens */
+  }
+
+  /* Adjust Navbar for mobile */
+  .navbar-collapse {
+    padding-left: 0;
+  }
+
+  .navbar {
+    padding: 0 5px;
+  }
+
+  .carousel-inner {
+    padding-right: 0; /* Remove right padding on smaller screens */
+  }
+
+  /* Navbar Font Size Adjustment for Small Screens */
+  .navbar-nav {
+    font-size: 14px; /* Make the font size smaller for mobile */
+  }
 }
