@@ -1,95 +1,74 @@
-/* Global Styles */
+/* General Body Styles */
 body {
-  background-color: red; /* Set a red background for the page */
-  height: 100%; /* Make sure the body fills the entire viewport */
-  margin: 0; /* Remove any default margin */
-  font-family: Arial, sans-serif; /* Set a basic font for the page */
+  font-family: Arial, sans-serif; /* Set a default font */
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light gray background */
 }
 
-/* Navbar Styling - Customize Bootstrap Navbar */
+/* Navbar Styling */
 .navbar {
-  height: 60px; /* Adjust the navbar height */
-  padding: 0 10px; /* Add padding inside the navbar */
+  margin-bottom: 30px; /* Add some space below the navbar */
 }
 
-/* Navbar Links Styling */
-.navbar-nav {
-  flex-direction: row; /* Make navbar items align horizontally */
+/* Navbar Image */
+.navbar img {
+  height: 50px; /* Set a fixed height for the logo */
 }
 
-/* Nav links customization */
-.nav-link {
-  margin-left: 30px; /* Add space between each link */
-  color: black; /* Set the default link color */
+/* Navbar Dropdown Styles */
+.nav-item .dropdown-menu {
+  background-color: #f8f9fa; /* Lighter background for the dropdown */
+  border-radius: 5px; /* Round corners for dropdown */
 }
 
-/* Active Navbar Link Styling */
-.nav-item.active .nav-link {
-  color: #007bff; /* Change color to blue for active links */
+.nav-item .dropdown-item {
+  color: #343a40; /* Set text color to dark */
 }
 
-/* Navbar Toggler (Hamburger Menu) */
-.navbar-toggler {
-  border: none; /* Remove the border from the hamburger menu */
+.nav-item .dropdown-item:hover {
+  background-color: #007bff; /* Highlight on hover */
+  color: white; /* Change text color to white on hover */
 }
 
-/* Dropdown Menu Styling */
-.nav-item.active .dropdown-menu {
-  background-color: #f8f9fa; /* Light background color for dropdown */
-}
-
-/* Carousel Styling */
+/* Carousel Styles */
 .carousel-inner {
-  padding-right: 50px; /* Adjust right padding of the carousel */
+  max-height: 400px; /* Limit the height of the carousel images */
 }
 
-.carousel-indicators {
-  width: 70px; /* Set a specific width for carousel indicators */
-  background: gray; /* Set a background color for the indicators */
-  margin-left: 100px; /* Move the indicators slightly to the right */
+.carousel-item img {
+  width: 100%; /* Make images stretch to fill the carousel width */
+  height: auto;
 }
 
-/* Video Styling */
-video {
-  width: 100%; /* Make videos take up 100% of the width */
-  max-height: 300px; /* Limit the height of videos */
-  object-fit: cover; /* Ensure the video maintains its aspect ratio */
-}
-
-/* Box Layout - Divide into 3 equal sections */
+/* Box Styling */
 .box {
-  float: left;
-  width: 33.33%; /* Each box takes up one-third of the width */
-  padding: 50px; /* Add padding inside each box */
-  box-sizing: border-box; /* Include padding in box width calculation */
+  padding: 20px; /* Add padding to the box */
+  margin: 20px 0; /* Add margin to create space between boxes */
+  background-color: white; /* White background for the box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center align text */
 }
 
-/* Media Queries for Smaller Screens */
-@media (max-width: 768px) {
-  .box {
-    width: 100%; /* On smaller screens, make the boxes full width */
-    padding: 20px; /* Reduce padding for smaller screens */
-  }
-
-  .nav-link {
-    margin-left: 10px; /* Reduce margin between links on small screens */
-  }
-
-  /* Adjust Navbar for mobile */
-  .navbar-collapse {
-    padding-left: 0;
-  }
-
-  .navbar {
-    padding: 0 5px;
-  }
-
-  .carousel-inner {
-    padding-right: 0; /* Remove right padding on smaller screens */
-  }
-
-  /* Navbar Font Size Adjustment for Small Screens */
-  .navbar-nav {
-    font-size: 14px; /* Make the font size smaller for mobile */
-  }
+.box h1 {
+  font-size: 2rem; /* Large heading */
+  color: #333; /* Dark text color */
 }
+
+.box h2 {
+  font-size: 1.5rem; /* Slightly smaller heading */
+  color: #007bff; /* Blue color for the subheading */
+}
+
+.box p {
+  font-size: 1.1rem; /* Slightly larger paragraph text */
+  line-height: 1.6; /* Increase line height for readability */
+  color: #555; /* Light gray text */
+  margin-top: 15px; /* Add margin to the top */
+}
+
+/* Image Styling */
+img.rounded {
+  border-radius: 10px; /* Round the corners of images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0
